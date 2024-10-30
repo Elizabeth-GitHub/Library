@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>LIBRARY</title>
-        <link rel="'stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="body-container" class="container">
@@ -15,6 +15,52 @@
             </div>
             <div id="newbookbutton-container" class="container button-container">
                 <button id="newbook-button" class="button" type="button" aria-label="Add a new book to the library">NEW BOOK</button>
+            </div>
+            <div id="newbookdialog-container" class="container">
+                <dialog id="newbook-dialog" role="dialog" aria-modal="true">
+                    <div id="formheader-container" class="container">
+                        <h2 id="form-header">Add a New Book:</h2>
+                    </div>
+                    <div id="newbookform-container" class="container">
+                        <form id="newbook-form" aria-labelledby="form-header" novalidate>
+                            <div id="forminput-container" class="container">
+                                <div id="newbooktitle-container" class="container forminput-container">
+                                    <label for="newbook-title">Title:</label>
+                                    <input type="text" id="newbook-title" name="newbook-title" required>
+                                </div>
+                                <div id="newbookauthor-container" class="container forminput-container">
+                                    <label for="newbook-author">Author:</label>
+                                    <input type="text" id="newbook-author" name="newbook-author" required>
+                                </div>
+                                <div id="newbookpages-container" class="container forminput-container">
+                                    <label for="newbook-pages">Pages:</label>
+                                    <input type="number" id="newbook-pages" name="newbook-pages" required>
+                                </div>
+                                <div id="newbookisread-container" class="container forminput-container">
+                                    <fieldset id="newbookisread-fieldset" aria-labelledby="isread-legend" role="group">
+                                        <div id="fieldsetlegend-container" class="container">
+                                            <legend  id="isread-legend">Is Read:</legend>
+                                         </div>
+                                        <div id="radiobutton-container" class="container">
+                                            <div id="yesradiobutton-container" class="container">
+                                                <label for="read">Yes</label>
+                                                <input id="read" name="isRead" type="radio" value="true" required />
+                                            </div>
+                                            <div id="noradiobutton-container" class="container">
+                                                <label for="unread">No</label>
+                                                <input id="unread" name="isRead" type="radio" value="false" required />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="formbutton-container" class="container">
+                                <button type="submit" class="button form-button" aria-label="Submit the form">Add Book</button>
+                                <button type="button" id="cancel-button" class="button form-button" aria-label="Cancel the form">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </dialog>
             </div>
         </div>
         <script src="script.js"></script>
