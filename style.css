@@ -6,3 +6,29 @@ fieldset {
     border: none; 
 }
 
+.bookcover-container {
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    background-color: #f3e5ab;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.book-author {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.book-pages, .read-status {
+    font-size: 0.9em;
+    color: #555;
+}
+
